@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC 106 Project 2 | Persuasive or Deceptive Visualization</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">DSC 106 Project 2</p>
+      <h1>Persuasive or Deceptive Visualization?</h1>
+      <p class="hero-copy">
+        This report uses the IMF Climate Change Indicators dataset to argue both sides of one proposition:
+        <strong>Advanced economies have made meaningful progress in reducing greenhouse gas emissions since 2010.</strong>
+      </p>
+      <div class="hero-meta">
+        <div class="meta-card">
+          <span class="meta-label">Group Members</span>
+          <p>[Add full names and UCSD emails here before submitting]</p>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Dataset</span>
+          <p>IMF Climate Change Indicators, using annual greenhouse-gas emissions for Advanced Economies across industries and households.</p>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Current Lean</span>
+          <p>We lean slightly toward the proposition being true overall, but only because the aggregate decline is real. The “false” side becomes more convincing when we focus on how uneven the progress is across sectors and time.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="viz-section pro">
+        <div class="section-intro">
+          <p class="section-label">Stance A</p>
+          <h2>Arguing the proposition is true</h2>
+          <p>
+            The pro-side visualizations emphasize the long-run aggregate decline in emissions and the fact that several large sectors moved downward between 2010 and 2023.
+          </p>
+        </div>
+        <figure class="viz-frame">
+          <img src="pro_side_charts.jpg" alt="Two charts arguing that advanced economies made progress reducing emissions since 2010.">
+          <figcaption>
+            The first chart aggregates annual greenhouse-gas emissions across all industries plus households for Advanced Economies from 2010–2023. The second transforms those same annual sector totals into percent change since 2010, then sorts sectors by that change to foreground where the largest declines occurred.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="decisions-section">
+        <div class="section-intro narrow">
+          <p class="section-label">Design Decisions</p>
+          <h2>Visualization 1 rationale and scoring</h2>
+          <p>Scores run from <strong>-2</strong> (fully deceptive) to <strong>2</strong> (fully earnest).</p>
+        </div>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Use the full 2010–2023 time span in the top chart</h3>
+            <span class="score earnest">Score: +1.5</span>
+          </div>
+          <p>
+            We chose the full time range because the proposition explicitly asks whether progress happened <em>since 2010</em>, so using the complete window is a fair way to answer that question. This choice is still somewhat rhetorical because it deemphasizes the fact that progress is not evenly distributed within that period, but it remains more earnest than deceptive.
+          </p>
+          <p>
+            We considered zooming into the post-2020 rebound or using quarterly data, but both alternatives weakened the smooth overall decline that makes the pro-side case easier to read.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Show the top chart as a zero-baseline filled line/area chart</h3>
+            <span class="score earnest">Score: +1.0</span>
+          </div>
+          <p>
+            A zero baseline helps the reader gauge the scale of the decline honestly, while the filled area visually reinforces the sense of a large total reduction over time. This makes the argument feel steadier and more substantial without relying on a misleading truncated axis.
+          </p>
+          <p>
+            A plain line chart would have been more neutral, but it also would have made the decline feel less memorable and less persuasive.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Sort sectors by percent change in the second chart</h3>
+            <span class="score mixed">Score: +0.5</span>
+          </div>
+          <p>
+            Sorting by percent change groups the largest declines together and makes the sector-level pattern easier to scan quickly. At the same time, it encourages the reader to focus on directional change rather than the absolute size of those sectors, which subtly favors the pro-side story.
+          </p>
+          <p>
+            We considered keeping the original sector order, but that made the chart harder to read and weakened the clustering effect that helps communicate a shared downward trend.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>De-emphasize sectors that increased by coloring them gray</h3>
+            <span class="score deceptive">Score: -1.0</span>
+          </div>
+          <p>
+            We still include sectors like construction, agriculture, and transportation, but rendering them in muted gray makes them feel secondary to the green declines. This is persuasive because it preserves technical completeness while nudging the reader to treat counterevidence as background detail.
+          </p>
+          <p>
+            If we had colored increases more strongly, the chart would have felt more balanced but less clearly supportive of the proposition.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Use annotations to highlight the overall takeaway instead of describing the chart mechanics</h3>
+            <span class="score earnest">Score: +1.5</span>
+          </div>
+          <p>
+            Following TA feedback, we revised the annotations so they guide the reader toward the substantive interpretation, such as how far 2023 remains below 2010 and which sectors drove the largest reductions. This is more effective because it frames what the reader should notice in the data rather than explaining why the chart is persuasive.
+          </p>
+          <p>
+            The tradeoff is that the chart becomes slightly more rhetorically forceful, but it is also more aligned with the course rubric for titles, labels, and annotations.
+          </p>
+        </article>
+      </section>
+
+      <section class="viz-section con">
+        <div class="section-intro">
+          <p class="section-label">Stance B</p>
+          <h2>Arguing the proposition is false</h2>
+          <p>
+            The con-side visualizations narrow the story to a later time window and a set of sectors that make progress look fragile, uneven, and overly dependent on electricity.
+          </p>
+        </div>
+        <figure class="viz-frame">
+          <img src="con_side_charts.jpg" alt="Two charts arguing that advanced economies have not made broad-based progress reducing emissions.">
+          <figcaption>
+            The small multiples intentionally filter to transportation, households, and agriculture and narrow the window to 2015–2023 to isolate sectors with weak recent performance. The contribution chart converts sector totals into absolute 2010-to-2023 changes, making it easier to compare how much each sector contributed to the overall decline.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="decisions-section">
+        <div class="section-intro narrow">
+          <p class="section-label">Design Decisions</p>
+          <h2>Visualization 2 rationale and scoring</h2>
+          <p>These choices are more explicitly selective because the goal is to build a credible argument against the same proposition.</p>
+        </div>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Narrow the top-row charts to 2015–2023</h3>
+            <span class="score deceptive">Score: -1.5</span>
+          </div>
+          <p>
+            We intentionally narrowed the window to the post-Paris Agreement years because that period gives the reader a stronger reason to expect visible progress after major climate commitments. This is persuasive because it removes earlier declines that support the pro-side story and concentrates attention on a more mixed recent period.
+          </p>
+          <p>
+            We call this partially deceptive because the proposition is about progress since 2010, so limiting the window excludes relevant history even though the new window is still defensible as a policy-focused lens.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Cherry-pick transportation, households, and agriculture for the small multiples</h3>
+            <span class="score deceptive">Score: -2.0</span>
+          </div>
+          <p>
+            We selected these three sectors because they rise or stay relatively flat over 2015–2023, making them strong counterexamples to the idea of broad-based progress. This decision is central to the con-side argument because it transforms a mixed sectoral picture into one that looks consistently stagnant.
+          </p>
+          <p>
+            We considered choosing sectors by absolute emissions size instead, but that would have forced electricity back into view and weakened the negative case.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Use tight y-axis ranges in the small multiples</h3>
+            <span class="score mixed">Score: -1.0</span>
+          </div>
+          <p>
+            Tight y-axis limits make modest changes appear visually dramatic and help stagnation feel more urgent. This is deceptive to a degree because the reader may overestimate the magnitude of these changes, even though the axis itself remains numerically consistent within each panel.
+          </p>
+          <p>
+            We kept the ranges readable and did not hide axis labels entirely, which makes the tactic more subtle than a fully misleading scale break.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Reframe the second chart around sector contributions to the total decline</h3>
+            <span class="score earnest">Score: +1.0</span>
+          </div>
+          <p>
+            This chart asks a different but reasonable question: whether the overall reduction reflects broad-based decarbonization or mostly one dominant sector. The answer it suggests is that electricity carries most of the burden, which helps the con-side by making aggregate progress look narrow rather than systemic.
+          </p>
+          <p>
+            We view this as relatively earnest because it uses the full 2010–2023 window and makes a real structural point, even though it is still chosen to challenge the proposition.
+          </p>
+        </article>
+
+        <article class="decision-card">
+          <div class="decision-header">
+            <h3>Use annotation text to point readers to the implication of the transformation</h3>
+            <span class="score earnest">Score: +1.5</span>
+          </div>
+          <p>
+            After the TA feedback, we changed the annotations so they explain what the filtered time window and contribution framing imply: little sustained decline in the selected sectors, and an outsized role for electricity in the total reduction. This helps the visualizations narrate the intended interpretation directly rather than talking about persuasion itself.
+          </p>
+          <p>
+            That makes the charts more communicative and also brings them closer to the assignment’s expectation that annotations should contextualize and frame the depicted data.
+          </p>
+        </article>
+      </section>
+
+      <section class="reflection-section">
+        <div class="section-intro narrow">
+          <p class="section-label">Reflection</p>
+          <h2>What this process changed for us</h2>
+        </div>
+
+        <p>
+          The most straightforward part of this project was finding a proposition that the IMF climate dataset could plausibly support from both directions. Once we isolated annual greenhouse-gas emissions for Advanced Economies, the aggregate series already showed a strong decline from 2010 to 2023, so the pro-side case came together quickly. The harder part was constructing a con-side argument that still felt credible. What finally worked was not inventing a new metric, but transforming the same table into a later policy-era window and focusing on sectors like transportation, households, and agriculture that do not share the same clean downward story.
+        </p>
+
+        <p>
+          What surprised us most was how much rhetorical force came from choices that still look “clean” and technically competent. Sorting sectors by percent change, converting totals into contribution bars, muting sectors that increased, and selecting the post-Paris Agreement period all shaped interpretation before the reader ever examined the raw values. The TA feedback reinforced this point. Our original annotations sometimes explained <em>why</em> a chart was persuasive, but the revised version works better because the annotations now direct the reader toward claims in the data itself, such as how far 2023 remains below 2010 or how much of the total reduction comes from electricity.
+        </p>
+
+        <p>
+          After building both sides, we would define ethical analysis and visualization as a practice of making rhetorical choices while being honest about what those choices foreground, omit, or reframe. In this project, the clearest ethical tension came from our con-side choices: filtering to 2015–2023 and highlighting only three sectors absolutely made the skeptical argument stronger, but those choices also excluded evidence that mattered to the original proposition. That tension is what now separates acceptable persuasion from misleading analysis for us. Persuasion can still be selective, but once the selection removes too much relevant context or systematically hides the strongest counterevidence, the visualization starts doing more than framing the data; it starts distorting what a careful reader would reasonably conclude.
+        </p>
+      </section>
+
+      <section class="footer-note">
+        <p><strong>Source:</strong> IMF Climate Change Indicators dataset provided for DSC 106 Project 2.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
